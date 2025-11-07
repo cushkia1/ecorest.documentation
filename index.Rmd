@@ -377,7 +377,7 @@ Returns cost-effectiveness analysis for a particular set of alternatives.
 
 Inputs are:
 
-* `benefit`: a vector of restoration benefits. Typically, these are time-averaged ecological outcomes (e.g., average annual habitat units). Often project benefits are best presented as the "lift" associated with a restoration action(i.e., the benefits of an alternative minus the benefits of a "no action" plan).  
+* `benefit`: a vector of restoration benefits. Typically, these are time-averaged ecological outcomes (e.g., average annual habitat units). Often, project benefits are best presented as the "lift" associated with a restoration action (i.e., the benefits of an alternative minus the benefits of a "no action" plan).  
 * `cost`: a vector of restoration costs. Typically, these are monetary costs associated with a given restoration action such as project first cost or annualized economic cost. Notably, these functions are agnostic to units, so costs could also be non-monetary such as lost political capital or social costs of each alternative.  
 
 Function returns a numeric vector identifying each plan as cost-effective (1) or non-cost-effective (0). The cost-effective actions comprise the Pareto frontier of non-dominated alternatives at a given level of cost or benefit.
@@ -394,7 +394,7 @@ Examines the slope of the cost-effectiveness frontier to isolate how unit cost (
 
 Inputs are:
 
-* `benefit`: a vector of restoration benefits. Typically, these are time-averagedecological outcomes (e.g., average annual habitat units). Often project benefits are best presented as the "lift" associated with a restoration action(i.e., the benefits of an alternative minus the benefits of a "no action" plan).  
+* `benefit`: a vector of restoration benefits. Typically, these are time-averaged ecological outcomes (e.g., average annual habitat units). Often, project benefits are best presented as the "lift" associated with a restoration action (i.e., the benefits of an alternative minus the benefits of a "no action" plan).  
 * `cost`: a vector of restoration costs. Typically, these are monetary costs associated with a given restoration action such as project first cost or annualized economic cost. Notably, these functions are agnostic to units, so costs could also be non-monetary such as lost political capital or social costs of each alternative.  
 * `CE`: numeric vector of 0's and 1's indicating whether a plan is cost-effective (1) or non-cost-effective (0). Can be derived from `CEfinder`.  
 
@@ -412,14 +412,14 @@ Plots summary outputs of Cost-effective Incremental Cost Analysis (CEICA) in *.j
 
 Inputs are:
 
-* `altnames`: a vector of numerics or characters as unique restoration action identifiers.  
-* `benefit`: a vector of restoration benefits. Typically, these are time-averagedecological outcomes (e.g., average annual habitat units). Often project benefits are best presented as the "lift" associated with a restoration action(i.e., the benefits of an alternative minus the benefits of a "no action" plan).  
+* `altnames`: a vector of numeric values or characters as unique restoration action identifiers.  
+* `benefit`: a vector of restoration benefits. Typically, these are time-averaged ecological outcomes (e.g., average annual habitat units). Often, project benefits are best presented as the "lift" associated with a restoration action (i.e., the benefits of an alternative minus the benefits of a "no action" plan).  
 * `cost`: a vector of restoration costs. Typically, these are monetary costs associated with a given restoration action such as project first cost or annualized economic cost. Notably, these functions are agnostic to units, so costs could also be non-monetary such as lost political capital or social costs of each alternative.  
 * `CE`: numeric vector of 0's and 1's indicating whether a plan is cost-effective (1) or non-cost-effective (0). Can be derived from `CEfinder`.  
 * `BB`: numeric vector of 0's and 1's indicating whether a plan is a best buy (1) or not (0). Can be derived by isolating select outputs from `BBfinder`.  
 * `figure.name`: output figure file name structured as "filename.jpeg".  
 
-Function returns a multi-panel *.jpeg figure summarizing cost-effectiveness and incremental cost analysesvalue of habitat quality from 0 to 1 ignoring NA values.
+Function returns a multi-panel *.jpeg figure summarizing cost-effectiveness and incremental cost analyses value of habitat quality from 0 to 1 ignoring NA values.
 
 
 ```{r echo=TRUE}
@@ -432,6 +432,8 @@ CEICAplotter
 
 **Insert description of the Shiny app once complete. The goal of this section is to describe app construction and basic flow of logic (testing will be described below).**
 
+**KIARA Fix bugs in ecorest app**
+
 
 ## **4. Evaluation**
 
@@ -439,7 +441,7 @@ CEICAplotter
 **In general think both about a priori quality assurance and post hoc quality control**
 
 
-Ecological models typically rely on multiple variables, ecological processes, and in many cases present a variety of ecological outcomes. As such, models can quickly become complex system representations with many components, inputs, assumptions, and modules. Model evaluation is the process for ensuring that numerical tools are scientifically defensible and transparently developed. Evaluation is often referred to as verification or validation, but it in fact includes a family of methods ranging from peer review to model testing to error checking (Schmolke et al. 2010). In this more general sense, evaluation should include the following (Grant and Swannack 2008): (1) assessing the reasonableness of model structure, (2) assessing functional relationships and verifying code, (3) evaluating model behavior relative to expected patterns, (4) comparing outcomes to empirical data, if possible, and (5) analyzing uncertainty in predictions. The USACE has established an ecological model certification process to ensure that planning models are sound and functional. These generally consist of evaluating tools relative to the three following categories: technical quality, system quality, and usability (EC 1105-2-412).
+Ecological models typically rely on multiple variables or ecological processes, and in many cases present a variety of ecological outcomes. As such, models can quickly become complex system representations with many components, inputs, assumptions, and modules. Model evaluation is the process for ensuring that numerical tools are scientifically defensible and transparently developed. Evaluation is often referred to as verification or validation, but it in fact includes a family of methods ranging from peer review to model testing to error checking (Schmolke et al. 2010). In this more general sense, evaluation should include the following (Grant and Swannack 2008): (1) assessing the reasonableness of model structure, (2) assessing functional relationships and verifying code, (3) evaluating model behavior relative to expected patterns, (4) comparing outcomes to empirical data, if possible, and (5) analyzing uncertainty in predictions. The USACE has established an ecological model certification process to ensure that planning models are sound and functional. These generally consist of evaluating tools relative to the three following categories: technical quality, system quality, and usability (EC 1105-2-412).
 
 
 #### *4.1. System Quality*  
@@ -447,6 +449,10 @@ Ecological models typically rely on multiple variables, ecological processes, an
 
 System quality: Does the model work the way we say it works?  Numerical accuracy of the model / code verification.  Does the calculator work?  Quality assurance measures taken (e.g., coding practices, code checking).  Quality control (testing plan, model breaking points).  Error outputs. 
 
+**KIARA discuss:**
+- re-reviewing all model structures in blue books
+- testing functionality of all models with random inputs
+- Testing models with input data provided in the blue book to ensure that correct outputs are produced (how many models was this data available for?)
 
 Reviewed at CRAN
 
@@ -463,7 +469,7 @@ Reviewed at CRAN
 Technical quality: This is the scientific evaluation of the model.  Describe what makes the models of the appropriate or highest scientific quality (e.g., literature basis).  What is the effect of any one variable on the outcome (analysis that answers question – global sensitivity analysis of model structure)?  Does the model structure make sense?  How uncertain are model variables?  Are parameters repeatable, reliable, and transparent?  Limitations in terms of breaking points of the model (parametric).  Verification exercise?  Validation exercise?  Goodness of fit?  Pattern oriented modeling?  Turing test?
 
 
-Not really applicable
+Discuss sensitivity and uncertainty analysis results.
 
 Mention sensitivity analysis and associated appendix
 
@@ -485,7 +491,7 @@ Usability: Model software / hardware availability or requirements (e.g., ACE-IT 
 Other considerations: USACE policy compliance and conformance. End-user capability. Adaptability for future applications (same system new data, different systems). Archival (code, model maintenance, new programming languages, etc.).
 
 
-In general for USACE: R is globally available and free. R is ACE-IT approved. Simple formating. 
+In general for USACE: R is globally available and free. R is ACE-IT approved. Simple formatting. 
 
 
 Within R-package:  
@@ -535,7 +541,7 @@ Insert brief review with some highlights. Major approach? Key findings? Model li
 
 Funding: EMRRP
 
-Ideas and collaboration: Nate Richards, Tyler Keys, Christina Saltus, Brook Herman, Carra Carrillo
+Ideas and collaboration: Nate Richards, Tyler Keys, Christina Saltus, Brook Herman, Carra Carrillo, Colton Shaw
 
 Testers: Michael Dougherty, Mick Porter, Danny Allen, Robin Armetta, etc.
 
@@ -547,7 +553,7 @@ Allen, A.W. 1987. Habitat suitability index models: barred owl. U.S. Fish Wild. 
 
 Brinson M.M. 1993. A hydrogeomorphic classification for wetlands. Technical Report WRP-DE-4. Vicksburg, MS: U.S. Army Engineer Waterway Experiment Station.
 
-Carrillo C., McKay S.K., and Swannack T.S. 2020. Ecological Model Development: Toolkit for interActive Modeling (TAM). ERDC TN-EMRRP-??.  U.S. Army Engineer Research and Development Center, Vicksburg, Mississippi.
+Carrillo C., McKay S.K., and Swannack T.S. 2022. Ecological Model Development: Toolkit for interActive Modeling (TAM). ERDC TN-EMRRP-SR-90.  U.S. Army Engineer Research and Development Center, Vicksburg, Mississippi.
 
 Fischenich J.C. 2008. The application of conceptual models to ecosystem restoration. ERDC TN-EBA-TN-08-1. U.S. Army Engineer Research and Development Center, Vicksburg, Mississippi.
 
@@ -557,9 +563,9 @@ Herman B.D., McKay S.K., Altman S., Richards N.S., Reif M., Piercy C.D., and Swa
 
 Hijmans R.J. and Ghosh A. 2019. Spatial data analysis with R. https://rspatial.org/. 
 
-McKay S.K.  2009.  Reducing spreadsheet errors.  ERDC TN-EMRRP-EBA-03.  U.S. Army Engineer Research and Development Center, Vicksburg, Mississippi.
+McKay S.K. 2009. Reducing spreadsheet errors.  ERDC TN-EMRRP-EBA-03.  U.S. Army Engineer Research and Development Center, Vicksburg, Mississippi.
 
-McKay S.K. and Hernández-Abrams D.D. 2020. Package ‘ecorest’. CRAN Reference Manual. https://cran.r-project.org/web/packages/ecorest/ecorest.pdf. 
+McKay S.K., Hernández-Abrams D.D., and Cushway K.C. 2025. Package ‘ecorest’. CRAN Reference Manual. https://cran.r-project.org/web/packages/ecorest/ecorest.pdf. 
 
 McKay S.K., Pruitt B.A., Zettle B., Hallberg N., Hughes C., Annaert A., Ladart M., and McDonald J. 2018a. Proctor Creek Ecological Model (PCEM): Phase 1-Site screening.  ERDC/EL TR-18-11. U.S. Army Engineer Research and Development Center, Vicksburg, Mississippi.
 
@@ -643,7 +649,7 @@ Insert comprehensive model testing documentation.
 ## **Appendix D: Example of Sensitivity Analysis**
 
 
-Insert example based on SMURF code.
+An example of sensitivity and uncertainty analysis for HSI models can be found [here](https://usace-wrises.github.io/USACE.EcoMod.Training/sensitivity-and-uncertainty-analysis-for-habitat-suitability-index-hsi-models.html).
 
 
 ## **Appendix E: User's Guide**
