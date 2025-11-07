@@ -784,7 +784,7 @@ Insert comprehensive model testing documentation.
 ## **Appendix D: Example of Sensitivity Analysis**
 
 
-Insert example based on SMURF code.
+A tutorial on how to conduct sensitivity and uncertainty analysis for HSI models can be found here: https://usace-wrises.github.io/USACE.EcoMod.Training/sensitivity-and-uncertainty-analysis-for-habitat-suitability-index-hsi-models.html
 
 
 ## **Appendix E: User's Guide**
