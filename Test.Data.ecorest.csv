@@ -1,0 +1,350 @@
+﻿Model,Testing notes
+alewifeJuv,No data available
+alewifeJuvAndSAEL,No data available
+alewifeSAEL,No data available
+americanalligatorNontidal,Tested with dataset 1 and 3
+americanalligatorTidal,Tested with dataset 2
+americanblackduckWinteringEVegWetland,Tested with dataset 3
+americanblackduckWinteringNCapeCod,Tested with dataset 1
+americanblackduckWinteringSCapeCod,Tested with dataset 2
+americancoot,No data available
+americaneiderBreeding,Tested with datasets 1-3
+americanoysterGulfofMexModifier,Tested with datasets 1-5
+americanoysterGulfofMexTypical,Tested with datasets 1-5
+americanshadEstu,Tested with datasets 1-4
+americanshadRiv,Tested with datasets 1-4
+americanwoodcockWinteringForestedDry,No data available
+americanwoodcockWinteringForestedMoist,No data available
+americanwoodcockWinteringForestedWet,No data available
+americanwoodcockWinteringShrubDry,No data available
+americanwoodcockWinteringShrubMoist,No data available
+americanwoodcockWinteringShrubWet,No data available
+arcticgrayling,Tested with datasets 1-3
+atlanticcroakerLATideLt0.5m,Checked with provided dataset
+atlanticcroakerLATideMt0.5m,Checked with provided dataset
+atlanticcroakerOtherTideLt0.5m,Checked with provided dataset
+atlanticcroakerOtherTideMt0.5m,Checked with provided dataset
+atlanticcroakerWetlandLATideLt0.5m,No data available
+atlanticcroakerWetlandLATideMt0.5m,No data available
+atlanticcroakerWetlandOtherTideLt0.5m,No data available
+atlanticcroakerWetlandOtherTideMt0.5m,No data available
+bairdssparrow,No data available
+baldeagleBreeding,No data available
+barredowl,No data available
+beaverLacAreaLt8ha,No data available
+beaverLacAreaMtoe8ha,No data available
+beaverPalu,No data available
+beaverRiv,No data available
+beltedkingfishLenticConstWave,No data available
+beltedkingfishLenticNoConstWave,No data available
+beltedkingfishLotic,No data available
+bigmouthbuffaloLacNoSal,Tested with datasets 1-3; CCF of dataset 2 is incorrect (should be 0.52) and CCF and CR appear wrong in dataset 3 in literature example
+bigmouthbuffaloLacSal,No data available
+bigmouthbuffaloRivNoSal,Tested with datasets 1-3; CR of dataset 3 is incorrect (should be 0.3)
+bigmouthbuffaloRivSal,No data available
+blackbear,No data available
+blackbelliedwhistlingduck,Tested with datasets 1-3
+blackbrant,No data available
+blackbullheadLac,"Tested with 3 datasets, Dataset 1 seems to have incorrect CC value in documentation but model matches results for other datasets"
+blackbullheadRiv,"Checked with datasets 1, 2, and 3; seems correct but authors rounded weirdly so numbers were a little different"
+blackcappedchickadeeFoodCanH,No data available
+blackcappedchickadeeFoodCanVol,No data available
+blackcrappieLacNoSal,CR is slightly off in dataset 2 and 3; independently verify
+blackcrappieLacSal,CR is slightly off in dataset 2 and 3; independently verify
+blackcrappieRivNoSal,Tested with datasets 1-3; table includes SIV14 but does not seem to use it in calculations
+blackcrappieRivSal,"SIV14 says lacustrine only, but there is an option to include SIV14 in the riverine model"
+blacknosedaceLac,Tested with datasets 1-3
+blacknosedaceRiv,Tested with datasets 1-3; might be good to have someone test removing life stages?
+blackshoulderedkite,Results do not match example data because equation is different to account for area weighting
+blacktailedprairiedog,No data available
+bluegillLac,"Tested with datasets 1, 2, and 3; CWQ for dataset 2 is off by a little- independently verify"
+bluegillRiv,"Tested with datasets 1, 2, and 3: Dataset 1, CWQ should be 0.4 because SIV8=0.4? Possible error in documentation?"
+bluegrouse,No data available
+blueherringJuv,No data available
+blueherringJuvandSAEL,No data available
+blueherringSAEL,No data available
+bluewingedtealBreeding,No data available
+bobcatLt4ha,No data available
+bobcatMtoe4ha,No data available
+brewerssparrow,No data available
+brooktroutLacAllLtoe15C,No data available
+brooktroutLacAllMt15C,No data available
+brooktroutRivAllLtoe15CLtoe5mEC,Tested with dataset 1 all components
+brooktroutRivAllLtoe15CMt5mEC,No data available
+brooktroutRivAllMt15CLtoe5mEC,Tested with dataset 2 all components
+brooktroutRivAllMt15CMt5mEC,No data available
+brownshrimpNGulfMex,Tested with datasets 1-4
+brownthrasher,No data available
+browntroutCompLtoe10C,"Tested with sample dataset; CFr value is incorrect, but typo in documentation; CA adjusted is also wrong, but the documentation says limited by SIV3, which is not included in CA?"
+browntroutCompMt10C,"Tested with sample dataset; CFr value is incorrect, but typo in documentation; CE produces 0.7 because it IS SIV3 limited, typo in documentation?"
+browntroutLimitLtoe10C,"Tested with sample dataset; CFr value is incorrect, but typo in documentation"
+browntroutLimitMt10C,"Tested with sample dataset; CFr value is incorrect, but typo in documentation"
+bullfrog,No data available
+cactuswren,No data available
+canvasbackBreeding,No data available
+channelcatfishLac,Tested with datasets 1-3; all correct except CC for dataset 3 is off by a very small amount
+channelcatfishRiv,Tested with datasets 1-3; CR is slightly off for all three datasets; have someone check equation independently
+chinooksalmonComp5to10CSand,Tested with Dataset 1; CE is wrong but probably typo because SIV12=0.6?
+chinooksalmonComp5to10CSilt,Tested with Dataset 1; CE is wrong but probably typo because SIV12=0.6?
+chinooksalmonCompLtoe5CSand,Tested with Dataset 1; CE is wrong but probably typo because SIV12=0.6?
+chinooksalmonCompLtoe5CSilt,Tested with Dataset 1; CE is wrong but probably typo because SIV12=0.6?
+chinooksalmonCompMt10CSand,Tested with Dataset 1; CE is wrong but probably typo because SIV12=0.6?
+chinooksalmonCompMt10CSilt,Tested with Dataset 1; CE is wrong but probably typo because SIV12=0.6?
+chinooksalmonLimit5to10CSand,Tested with Dataset 1
+chinooksalmonLimit5to10CSilt,Tested with Dataset 1
+chinooksalmonLimitLtoe5CSand,Tested with Dataset 1
+chinooksalmonLimitLtoe5CSilt,Tested with Dataset 1
+chinooksalmonLimitMt10CSand,Tested with Dataset 1
+chinooksalmonLimitMt10CSilt,Tested with Dataset 1
+chumsalmonAlevin,No data available
+chumsalmonEyedEmb,No data available
+clapperrail,Checked with datasets 1-3
+cohosalmonSpringSummerSeaMig,No data available
+cohosalmonWinterRearing,No data available
+commoncarpLacNoSal,"HSI scores for dataset 1 and 3 in docs are incorrect (#1 uses a value of 0.7 for COT in the final equation rather than 0.4, and #3 neglects to account for SIV12 being <=0.4); Storage ratio graph from documentation is much smoother, but no actual breakpoints are provided"
+commoncarpLacSal,"HSI scores for dataset 1 and 3 in docs are incorrect (#1 uses a value of 0.7 for COT in the final equation rather than 0.4, and #3 neglects to account for SIV12 being <=0.4); Storage ratio graph from documentation is much smoother, but no actual breakpoints are provided"
+commoncarpRivNoSal,No data available
+commoncarpRivSal,No data available
+commonshinerLac,Tested with datasets 1-3
+commonshinerRiv,Tested with datasets 1-3
+creekchubRivLargerStrmDistMt5km,"Tested with datasets 1-2; CC incorrect for dataset 2, may be typo; recheck; Example data in dataset 3 does not align with what is shown on the graph for SIV1"
+creekchubRivLargerStrmDistWithin5km,Tested with dataset 3; HSI is incorrect because authors did not account for full equation being smaller than CR; recheck
+cutthroatLacGenLtoe15C,No data available
+cutthroatLacGenMt15C,No data available
+cutthroatLacLahontanLtoe15C,No data available
+cutthroatLacLahontanMt15C,No data available
+cutthroatRivGenLtoe15CLtoe5m,"Tested with datasets 1-3; HSI is incorrect for Dataset 1, but should be 0.95 because CA<final equation, so error in documentation; Dataset 2, CJ and COT are wrong, but can't find error and HSI is wrong but again should be equal to CA; Dataset 3, CJ in documentation is incorrect (should be 0.3 since SIV15<=0.4); Final HSI should also be 0.3; COT is also wrong, but unsure why"
+cutthroatRivGenLtoe15CMt5m,"Tested with datasets 1-3; HSI is incorrect for Dataset 1, but should be 0.95 because CA<final equation, so error in documentation; Dataset 2, CJ and COT are wrong, but can't find error and HSI is wrong but again should be equal to CA; Dataset 3, CJ in documentation is incorrect (should be 0.3 since SIV15<=0.4); Final HSI should also be 0.3; COT is also wrong, but unsure why"
+cutthroatRivGenMt15CLtoe5m,"Tested with datasets 1-3; HSI is incorrect for Dataset 1, but should be 0.95 because CA<final equation, so error in documentation; Dataset 2, CJ and COT are wrong, but can't find error and HSI is wrong but again should be equal to CA; Dataset 3, CJ in documentation is incorrect (should be 0.3 since SIV15<=0.4); Final HSI should also be 0.3; COT is also wrong, but unsure why"
+cutthroatRivGenMt15CMt5m,"Tested with datasets 1-3; HSI is incorrect for Dataset 1, but should be 0.95 because CA<final equation, so error in documentation; Dataset 2, CJ and COT are wrong, but can't find error and HSI is wrong but again should be equal to CA; Dataset 3, CJ in documentation is incorrect (should be 0.3 since SIV15<=0.4); Final HSI should also be 0.3; COT is also wrong, but unsure why"
+cutthroatRivLahontanLtoe15CLtoe5m,"Tested with datasets 1-3; HSI is incorrect for Dataset 1, but should be 0.95 because CA<final equation, so error in documentation; Dataset 2, CJ and COT are wrong, but can't find error and HSI is wrong but again should be equal to CA; Dataset 3, CJ in documentation is incorrect (should be 0.3 since SIV15<=0.4); Final HSI should also be 0.3; COT is also wrong, but unsure why"
+cutthroatRivLahontanLtoe15CMt5m,"Tested with datasets 1-3; HSI is incorrect for Dataset 1, but should be 0.95 because CA<final equation, so error in documentation; Dataset 2, CJ and COT are wrong, but can't find error and HSI is wrong but again should be equal to CA; Dataset 3, CJ in documentation is incorrect (should be 0.3 since SIV15<=0.4); Final HSI should also be 0.3; COT is also wrong, but unsure why"
+cutthroatRivLahontanMt15CLtoe5m,"Tested with datasets 1-3; HSI is incorrect for Dataset 1, but should be 0.95 because CA<final equation, so error in documentation; Dataset 2, CJ and COT are wrong, but can't find error and HSI is wrong but again should be equal to CA; Dataset 3, CJ in documentation is incorrect (should be 0.3 since SIV15<=0.4); Final HSI should also be 0.3; COT is also wrong, but unsure why"
+cutthroatRivLahontanMt15CMt5m,"Tested with datasets 1-3; HSI is incorrect for Dataset 1, but should be 0.95 because CA<final equation, so error in documentation; Dataset 2, CJ and COT are wrong, but can't find error and HSI is wrong but again should be equal to CA; Dataset 3, CJ in documentation is incorrect (should be 0.3 since SIV15<=0.4); Final HSI should also be 0.3; COT is also wrong, but unsure why"
+diamondbackterrapinNesting,Tested with datasets 1-3
+downywoodpecker,No data available
+easternbrownpelican,Tested with example datasets
+easterncottontail,No data available
+easternmeadowlark,No data available
+easternwildturkeyCroplandHerb,No data available
+easternwildturkeyCroplandShrub,No data available
+easternwildturkeyForestHardDBH25.4cm,No data available
+easternwildturkeyForestHardDBH27.9cm,No data available
+easternwildturkeyForestHardDBH30.5cm,No data available
+easternwildturkeyForestHardDBH33.0cm,No data available
+easternwildturkeyForestHardDBH35.6cm,No data available
+easternwildturkeyForestHardDBH38.1cm,No data available
+easternwildturkeyHerb,No data available
+easternwildturkeyShrub,No data available
+englishsoleJuv,Tested with datasets 1-2 
+englishsoleJuvImpactAlt,Tested with dataset 3
+fallfishLac,Tested with datasets 1 and 2
+fallfishRivNoSpwn,No data available
+fallfishRivSpwn,Tested with datasets 1 and 2
+ferruginoushawkCrop,No data available
+ferruginoushawkHerbAndShrub,No data available
+fieldsparrow,No data available
+fisherWinterCov,No data available
+flatheadcatfishMacro,No data available
+flounderGulf,Tested with datasets 1-3
+flounderSouthern,Tested with datasets 1-4
+forstersternBreeding,Tested with datasets 1-3
+foxsquirrel,No data available
+gadwallBreeding,No data available
+gizzardshadLacNoTributaries,No data available
+gizzardshadLacSpwnTributaries,No data available
+graypartridge,No data available
+graysquirrel,No data available
+greatblueheron,No data available
+greategretFeeding,Tested with dataset 1
+greategretNestingIsland,Tested with dataset 2
+greategretNestingNonisland,Tested with dataset 3
+greaterprairiechickenHarvested,No data available
+greaterprairiechickenUnharvested,No data available
+greatersandhillcraneLt200ha,No data available
+greatersandhillcraneMtoe200ha,No data available
+greaterwhitefrontedgooseWinteringWetland,Tested with datasets 1-3
+greensunfishLac,Tested with datasets 1-3; CWQ is slightly off for dataset 1; recheck; no test of data that does not include salinity
+greensunfishRiv,"Tested with datasets 1-3; CWQ and HSI are slighlty higher than reported values for dataset three, re-check"
+greensunfishRivSal,No data available
+gulfmenhadenEstuary,Tested with datasets 1-5
+gulfmenhadenMarine,Tested with datasets 1-5
+hairywoodpecker,No data available
+hardclam,Tested with datasets 1-3
+inlandsilversideNoZooplankton,tested with Point Judith data
+inlandsilversideZooplankton,Tested with datasets 1-2
+laketroutReproducingLakes,No data available
+laketroutReproducingRes,No data available
+laketroutStocked,No data available
+largemouthbassLacN,"Tested with datasets 1-3; Components and HSIs slightly different for all datasets, but maybe just rounding?; recheck"
+largemouthbassLacS,"Tested with datasets 1-3; Components and HSIs slightly different for all datasets, but maybe just rounding?; recheck"
+largemouthbassRivGrad,"Added model; Tested with datasets 1-3; Components and HSIs slightly different for all datasets, but maybe just rounding?; recheck"
+largemouthbassRivVel,Sample data does not include SIV19 and SIV21
+larkbunting,No data available
+laughinggull,Tested with dataset 1-3 
+leastternVegCovLt15OrMt25pct,No data available
+leastternVegCovMtoe15OrLtoe25pct,No data available
+lesserscaupBreeding,No data available
+lesserscaupWintering,tested with datasets 1-3
+lessersnowgooseWintering,Tested with datasets 1-3
+lewiswoodpeckerSummerDeciduousDesertic,No data available
+lewiswoodpeckerSummerEvergreen,No data available
+lewiswoodpeckerWinterCropland,No data available
+lewiswoodpeckerWinterNotEForC,No data available
+lewiswoodpeckerYearRoundDeciduousDesertic,No data available
+lewiswoodpeckerYearRoundEvergreen,No data available
+littleneckclam,Tested with dataset 1
+longnosedaceLac,Tested with datasets 1-3
+longnosedaceRiv,Tested with datasets 1-3
+longnosesuckerLac,Tested with datasets 1-3; CJA for dataset 2 should be 0.7 because SIV13=0.7 (mistake in doc); assumed SIV8 graph started at 0 based on sample data
+longnosesuckerRiv,Tested with datasets 1-3
+mallardCroplandCorn,No data available
+mallardCroplandOtherCrops,No data available
+mallardCroplandSoy,No data available
+mallardForestedPaluWetlands,No data available
+mallardNonforestedPaluLacRiv,No data available
+marshwren,No data available
+marten,No data available
+minkPaluEmergHerb,No data available
+minkPaluForestedOrShrubLess405ha,No data available
+minkPaluForestedOrShrubMore405ha,No data available
+minkRivLac,No data available
+mooseLakeSupModelII,No data available
+mottledduckAny,Tested with dataset 1
+mottledduckBrood,Tested with dataset 3
+mottledduckNesting,Tested with dataset 2 and SIV7 from dataset 1
+muskellungeLargeLakeSpwnVegCurveA,No data available
+muskellungeLargeLakeSpwnVegCurveB,No data available
+muskellungeLargeLakeSpwnVegCurveC,No data available
+muskellungeLargeLakeSpwnVegCurveD,No data available
+muskellungeSmallLakeSpwnVegCurveA,No data available
+muskellungeSmallLakeSpwnVegCurveB,No data available
+muskellungeSmallLakeSpwnVegCurveC,No data available
+muskellungeSmallLakeSpwnVegCurveD,No data available
+muskratEstu,No data available
+muskratHW,No data available
+muskratRiv,No data available
+northernbobwhiteCroplands,No data available
+northernbobwhiteDbh25.4cm,No data available
+northernbobwhiteDbh27.9cm,No data available
+northernbobwhiteDbh30.5cm,No data available
+northernbobwhiteDbh33.0cm,No data available
+northernbobwhiteDbh35.6cm,No data available
+northernbobwhiteDbh38.1cm,No data available
+northernbobwhiteShrub,No data available
+northernpikeLacVegA,No data available
+northernpikeLacVegB,No data available
+northernpikeLacVegC,No data available
+northernpikeLacVegD,No data available
+northernpikeRivVegA,No data available
+northernpikeRivVegB,No data available
+northernpikeRivVegC,No data available
+northernpikeRivVegD,No data available
+northernpintail,No data available
+northernpintailWinteringGulfCoastPaluLacEstuLtoe5ppt,Tested with dataset 1; NAs not allowed
+northernpintailWinteringGulfPaluLacEstuMt5ppt,Tested with datasets 2 and 3
+ospreyLac,No data available
+ospreyRiv,No data available
+paddlefishAdSummerandWinterHab,Tested with datasets 1-4
+paddlefishSpwnHab,Tested with datasets 1-4
+pileatedwoodpeckerE,No data available
+pileatedwoodpeckerW,No data available
+pinewarbler,No data available
+pinksalmonLimit,Tested with dataset 1; add compensatory model if keeping brook trout compensatory?; SIV7 graph doesn't seem to match info in text exactly
+pinkshrimpEmergAndSeagrassVeg,"Tested with dataset 3, although SIV2 values don't make sense but give correct answer"
+pinkshrimpEmergVeg,"Checked with Datasets 1,2, and 3"
+pinkshrimpSeagrassVeg,"Checked with Datasets 1,2, and 3"
+plainssharptailedgrouse,No data available
+pronghorn,No data available
+RainbowtroutLac,No data available
+rainbowtroutRiv,"Tested with datasets 1-3; COT is slightly off for datasets 1 and 2, but probably rounding error"
+redbreastsunfishLacN,No data available
+redbreastsunfishLacS,No data available
+redbreastsunfishPalu,No data available
+redbreastsunfishRiv,No data available
+reddrumLarvJuvEstuLittleSubmVeg,Tested with datasets 1-3 from Table 3
+reddrumLarvJuvEstuSubmVeg,Tested with datasets 1-3
+redearsunfishLac,No data available
+redearsunfishRiv,No data available
+redheadWinteringWtrAvailable,Tested with datasets 1 and 2
+redheadWinteringWtrNotAvailable,Tested with dataset 3
+redkingcrabJuv1to4,Tested with datasets 1-3
+redkingcrabJuv4PlusandAd,Tested with datasets 1-3
+redkingcrabLarv,Tested with datasets 1-3
+redkingcrabYoungofYrJuv,Tested with datasets 1-3
+redspottednewtAquatic150m,No data available
+redspottednewtAquaticEntire,No data available
+redspottednewtTerrestrial,No data available
+redwingedblackbirdA,No data available
+redwingedblackbirdB,No data available
+redwingedblackbirdC,No data available
+roseatespoonbillIslandFuture,No data available
+roseatespoonbillIslandPresent,Checked with datasets 1 and 2
+roseatespoonbillMainlandFuture,No data available
+roseatespoonbillMainlandPresent,Checked with dataset 3
+ruffedgrouse,No data available
+shortnosesturgeon,Checked with datasets 1-3
+sliderturtle,No data available
+sloughdarterLac,Checked with datasets 1-3 
+sloughdarterRiv,"Checked with datasets 1-3; COT and HSI are incorrect for dataset 1, but this is likely a typo (0.02 vs. 0.2); Dataset 2 HSI is wrong, but this is a mistake because CWQ<=0.4, so should be 0.4; recheck"
+smallmouthbassLac,"Tested with datasets 1-3; Dataset 2 produces incorrect values for CWQ and CR, recheck; CR may be rounding error"
+smallmouthbassRiv,Tested with datasets 1-3
+smallmouthbuffaloLac,"Tested with datasets 1-3; have someone else check format of CWQ equation; dataset 3 CWQ and HSI are wrong but typo because SIV8 is 0.3 so both should be 0.3, not 0.41"
+smallmouthbuffaloRiv,Tested with datasets 1-3; have someone else check format of CWQ equation; dataset 3 HSI is slightly off but may be a rounding error
+snappingturtle,No data available
+snowshoehareForageBiomass,No data available
+snowshoehareForageVisual,No data available
+southernkingfishEstu,Tested with datasets 2 and 3
+southernkingfishMarine,No data available
+southernredbackedvole,No data available
+spotJuv,"Tested with datasets 1, 2, and 3"
+spottedbassLac,No data available
+spottedbassRiv,No data available
+spottedowl,No data available
+spottedseatrout,Tested on datasets 1-4
+steelheadtroutRiv,No data available
+stripedbassCoastal,Tested with datasets 1-4
+stripedbassInlandLacAd,Tested with datasets 1-3
+stripedbassInlandLacJuv,Tested with datasets 1-3
+stripedbassInlandLacLarv,Tested with datasets 1-3
+stripedbassInlandRiv,Tested with datasets 1-3
+swamprabbitForestedWetland,No data available
+swamprabbitHerbWetland,No data available
+swamprabbitShrubForestedWetland,No data available
+veeryNonWetland,No data available
+veeryWetland,No data available
+walleyeLacSecchiLtoe3.4m,No data available
+walleyeLacSecchiMt3.4m,No data available
+walleyeRivSecchiLtoe3.4m,No data available
+walleyeRivSecchiMt3.4m,No data available
+warmouthLac,No data available
+warmouthRiv,No data available
+westerngrebe,No data available
+whitebassLacCurveASubsIndex,Tested with datasets 1-3
+whitebassLacCurveBSubsIndex,Tested with datasets 1-3
+whitebassLacCurveCSubsIndex,Tested with datasets 1-3
+whitebassLacTribCurveASubsIndex,Tested with datasets 1-3
+whitebassLacTribCurveBSubsIndex,Tested with datasets 1-3
+whitebassLacTribCurveCSubsIndex,Tested with datasets 1-3
+whitebassRivCurveASubsIndex,"Tested with datasets 1-3; dataset 3 produces incorrect CF and COT values, but these appear to be typos in the documentation; recheck"
+whitebassRivCurveBSubsIndex,"Tested with datasets 1-3; dataset 3 produces incorrect CF and COT values, but these appear to be typos in the documentation; recheck"
+whitebassRivCurveCSubsIndex,"Tested with datasets 1-3; dataset 3 produces incorrect CF and COT values, but these appear to be typos in the documentation; recheck"
+whitecrappieLac,Tested with datasets 1-3 w/out salinity; dataset 3 slightly off but likely rounding error
+whitecrappieRiv,Tested with datasets 1-3 w/out salinity; dataset 3 slightly off but likely rounding error
+whiteibisIsland,Tested with datasets 1 and 3
+whiteibisWetland,Tested with dataset 2
+whiteshrimpNGulfofMex,Tested with datasets 1-4
+whitesuckerLacSpwnInletStrm,No data available
+whitesuckerLacSpwnLake,Tested with datasets 1-3
+whitesuckerLacSpwnLakeDrawMtoe2m,No data available
+whitesuckerLacSpwnLakeDrawMtoe5m,No data available
+whitesuckerRiv,Tested with dataset 1-3; could be tested with data from table 3 as well
+whitetaileddeerModelII,Tested with three datasets
+williamsonssapsucker,No data available
+woodduckBreeding,No data available
+woodduckWinter,No data available
+woodduckYear,No data available
+yellowheadedblackbird,No data available
+yellowperchLac,Tested 2 datasets
+yellowperchRiv,No data available
+yellowwarbler,No data available
