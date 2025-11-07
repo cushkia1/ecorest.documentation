@@ -580,11 +580,11 @@ for (s in 1:100) {
 ```
 
 
-##### *4.1.3 Model update*
+##### *4.1.3 Model updates: peer review and version control*
 
+R packages published and maintained on the Comprehensive R Archive Network (CRAN) undergo automated reviews prior to initial package release and every package update to ensure that they are functional and compatible with multiple versions of R software, and that dependencies or reverse dependencies remain functional (Wickham and Bryan 2023). Every initial R package submission is subject to both this automated review and an additional human review to ensure that it meets the CRAN standards for quality assurance (Wickham and Bryan 2023). Version 1.0.0 of `ecorest` passed the automated and human reviews at initial submission, and both automated reviews for updates to version 2.0.0 and 2.0.1. The current version of `ecorest`, v 2.0.1 is currently available on CRAN at https://cran.r-project.org/web/packages/ecorest/index.html, and older versions are archived on CRAN at https://cran.r-project.org/src/contrib/Archive/ecorest/.
 
-
-
+In addition to the CRAN review, `ecorest` was reviewed for model certification by the Ecosystem Restoration Planning Center of Expertise (ECO-PCX) (Appendix A)...
 
 #### *4.2. Technical Quality*  
 
@@ -597,13 +597,6 @@ Not really applicable
 Mention sensitivity analysis and associated appendix
 
 
-```{r}
-#Insert technical quality testing
-#Verification / validation figures
-#Statistical tests
-#Sensitivity analyses
-
-```
 
 
 #### *4.3. Usability*  
@@ -724,12 +717,14 @@ USACE. 2011. Assuring quality of planning models. EC-1105-2-412. Washington, DC.
 
 USACE. 2014. Appendix C: Environment. EC-11-2-206. Headquarters, USACE, Washington, D.C.
 
-US Fish and Wildlife Service. (1980a). Habitat as a basis for environmental assessment. Ecological Services Manual, 101.
+US Fish and Wildlife Service. 1980a. Habitat as a basis for environmental assessment. Ecological Services Manual, 101.
 
-US Fish and Wildlife Service. (1980b). Habitat Evaluation Procedures (HEP). Ecological Services Manual, 102.
+US Fish and Wildlife Service. 1980b. Habitat Evaluation Procedures (HEP). Ecological Services Manual, 102.
 
-US Fish and Wildlife Service. (1981). Standards for the Development of Habitat Suitability Index Models. Ecological Services Manual, 103.
+US Fish and Wildlife Service. 1981. Standards for the Development of Habitat Suitability Index Models. Ecological Services Manual, 103.
 
+Wickham, H. and Bryan, J. 2023. R packages: organize, test, document, and share your code. 2nd edition. O'Reilly Media
+, Sebastopol CA, uSA.
 
 ## **Appendix A: Glossary and Acronyms**
 
