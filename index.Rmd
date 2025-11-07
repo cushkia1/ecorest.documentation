@@ -311,7 +311,7 @@ HSImin
 ```
 
 
-*`HSIeqtn(HSImodelname, SIV, HSImetadata)`*
+*`HSIeqtn(HSImodelname, SIV, HSImetadata, exclude)`*
 
 Computes a habitat suitability index based on equations specified in USFWS habitat suitability models contained within `ecorest` via `HSImodels` and `HSImetadata`. Habitat suitability indices represent an overall assessment of habitat quality from combining individual suitability indices for multiple independent variables. The function computes an overall habitat suitability index. This function only applies to built-in index models described in Section 3.1.
 
