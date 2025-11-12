@@ -609,18 +609,18 @@ for (s in 1:100) {
 
 R packages published and maintained on the Comprehensive R Archive Network (CRAN) undergo automated reviews prior to initial package release and every package update to ensure that they are functional and compatible with multiple versions of R software, and that dependencies or reverse dependencies remain functional (Wickham and Bryan 2023). Every initial R package submission is subject to both this automated review and an additional human review to ensure that it meets the CRAN standards for quality assurance (Wickham and Bryan 2023). Version 1.0.0 of `ecorest` passed the automated and human reviews at initial submission, and both automated reviews for updates to version 2.0.0 and 2.0.1. The newest version of `ecorest`, v 2.0.1, is currently available on CRAN at https://cran.r-project.org/web/packages/ecorest/index.html, and older versions are archived on CRAN at https://cran.r-project.org/src/contrib/Archive/ecorest/.
 
-In addition to the CRAN review, `ecorest` was reviewed for model certification by the Ecosystem Restoration Planning Center of Expertise (ECO-PCX) (Appendix A)...
+In addition to the CRAN review, `ecorest` was reviewed for model certification by the Ecosystem Restoration Planning Center of Expertise (ECO-PCX) (Appendix G)...describe the review process here?
 
 #### *4.2. Technical Quality*  
 
 
 Technical quality: This is the scientific evaluation of the model.  Describe what makes the models of the appropriate or highest scientific quality (e.g., literature basis).  What is the effect of any one variable on the outcome (analysis that answers question – global sensitivity analysis of model structure)?  Does the model structure make sense?  How uncertain are model variables?  Are parameters repeatable, reliable, and transparent?  Limitations in terms of breaking points of the model (parametric).  Verification exercise?  Validation exercise?  Goodness of fit?  Pattern oriented modeling?  Turing test?
 
+Models are all literature-based and incorporate expert opinion
 
-Not really applicable
+Sensitivity and uncertainty analysis conducted for every model - summarise this and add link to PDF summaries on GitHub
 
-Mention sensitivity analysis and associated appendix
-
+Discuss how users should critically evaluate whether models are applicable in their current state, and could consider running an additional sensitivity analysis using code in Appendix D if uniform distribution doesn't seem reasonable.
 
 
 
