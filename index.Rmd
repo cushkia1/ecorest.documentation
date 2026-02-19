@@ -435,7 +435,7 @@ Ecological models typically rely on multiple variables or ecological processes, 
 
 #### *4.1. System Quality*  
 
-To ensure proper functionality, the `ecorest` package was rigorously assessed and peer-reviewed to ensure computational and numerical accuracy. System quality was assessed following best practices from McKay et al. (2022).
+To confirm proper functionality, the `ecorest` package was rigorously assessed and peer-reviewed to ensure computational and numerical accuracy. System quality was assessed following best practices from McKay et al. (2022).
 
 ##### *4.1.1 Quality Assurance*
 
@@ -477,133 +477,14 @@ if (length(timevec) != length(benefits)) {
 
 ##### *4.1.2 Quality Control*
 
-*Interim code checking*: During model integration into R, code functionality was checked periodically for each HSI model to ensure that models were operational, implemented correctly, and performed as expected. In addition, all models with USFWS documentation that included test data sets (n = 152 of 349) were verified for accuracy using all available test data (Appendix C). In cases where `HSIeqtn` outputs did not match USFWS outputs, models were independently verified to determine whether mismatches were due to rounding errors, coding issues in `ecorest`, or errors in USWFS documentation.
+*Interim code checking*: During model integration into R, code functionality was checked periodically for each HSI model to ensure that models were operational, implemented correctly, and performed as expected. In addition, all models with USFWS documentation that included test data sets (n = 152 of 349) were verified for accuracy using all available test data (Appendix C). In cases where `HSIeqtn` outputs did not match USFWS outputs, models were independently verified to determine whether mismatches were due to rounding errors, coding issues in `ecorest`, or probable errors in USWFS documentation.
 
-*Formal model testing*: Prior to release of `ecorest` version 2.0.0 and 2.0.1, the performance of all HSI models were tested using `SIcalc` and `HSIeqtn` to verify functionality and identify errors.
-
-To test model performance with `SIcalc`, we implemented the following code in R. Models were considered to have 'passed' testing if no errors were produced and no outputs were less than zero or greater than one.
-
-```{r echo = TRUE, results = 'hide', eval = FALSE}
-
-#Test SIcalc() functionality
-
-# Load libraries
-library(ecorest)
-
-# Create a function to determine whether entire row is NA (i.e., SIV isn't present for that particular model)
-all_na = function(x) all(is.na(x))
-
-# Create a function to determine whether a specific value is not NA
-not_na = function(x) sum(!is.na(x))
-
-# Set up for loop parameters
-models = data.frame(HSImetadata) # Copy HSImetadata into data frame
-models.i = cbind(models,"index"=1:nrow(models))
-index = models.i$index # Add an index column to models
-count_NA = 0 # Track the number of NA columns in a model
-num_SIV = 0 # Track the number of SIVs in a model
-wrong_models = 0 # Record models that do not perform as expected
-input = c() # Store input
-
-# Run a for loop to test whether SIcalc returns SIV scores correctly
-for (i in 1:length(index)) {
-  mod = HSImodels[i] # Store model
-  name = names(mod[1]) # Store model name
-  df = data.frame(get(name, mod)) # Pull data for model
-  # Run a for loop to determine which columns in the data frame contain data, and sample data from relevant columns
-  for (col in 1:length(df)) {
-    if (all_na(df[, col]) == TRUE){
-      count_NA = count_NA + 1 # If entire row is NA, number of breakpoints is NA and number of NA columns increases by 1
-    }
-      # For even columns:
-      if (col %% 2 != 0) {
-        n_rows = sum(rowSums(!is.na(df[col]))) # Find number of rows that aren't NA
-        input = c(input,as.character(sample(df[1:n_rows, col], 1, FALSE))) # Pull one value from the column to supply to SIcalc
-        input[input == ""] = NA # Set blanks equal to NA if a column isn't used in this particular model
-      }
-  }
-  num_SIV = (ncol(df) - count_NA) / 2 # Calculate the number of input variables
-  print(paste0("Model: ", name, ", index [", i, "]")) # Print the model name and index
-  num_NAs = sum(is.na(SIcalc(df, input))) # Find the number of NAs
-  print(paste("SIcalc outputs:", toString(SIcalc(df, input)))) # Calculate and output SIVs with SIcalc
-  cat(" \n ") # Print newline
-  # If the number of NA values is incorrect, stop the loop and identify the problem manually
-  if (num_NAs != (count_NA/2)) {
-    print('Error: something went wrong. Please revisit the number of SIV inputs.')
-    stop()
-  } else {
-      
-  }
-  # Reset loop variables for next loop
-  count_NA = 0
-  num_SIV = 0
-  input = c()
-}
-
-```
-
-To test model performance with `HSIeqtn`, we tested each model 100 times with randomly generated SI values between zero and one. Models were considered to have 'passed' testing if no errors were thrown and no outputs were NA, less than zero, or greater than one. If any model failed testing, it was re-examined and updated to fix the issue(s) causing errors.
-
-```{r echo=TRUE, results = 'hide', eval=FALSE}
-# Test HSIeqtn
-
-# Load libraries
-library(ecorest)
-
-# Create a function to determine whether entire row is NA (i.e., SIV isn't present for that particular model)
-all_na = function(x) all(is.na(x))
-
-# Create a function to determine whether a specific value is not NA
-not_na = function(x) sum(!is.na(x))
-
-# Set up iterator variables
-i = 1 # Iterator
-count_NA = 0 # Vector to store number of NA columns in model
-num_SIV = 0 # Vector to store number of SIV variables in model
-wrong_models = 0 # Vector to store models that aren't working properly
-
-models = data.frame(HSImetadata) # Store model information in data frame
-models.i = cbind(models,"index" = 1:nrow(models)) # Add index column
-index = models.i$index # Store index as a vector
-mat = matrix(NA, nrow = length(index), ncol = 100 + 1) # Create a matrix to store outputs
-mat[, 1] = HSImetadata[, 1] # Assign model names to first column of matrix
-
-# Run each model 100 times using different random SIV inputs between 0 and 1
-for (s in 1:100) {
-  for (i in 1:length(index)) {
-    mod = HSImodels[i] # Store model
-    name = names(mod[1]) # Store model name
-    df = data.frame(get(name,mod)) # Retrieve model data and add to data frame
-    for (col in 1:length(df)) {
-      if (all_na(df[,col]) == TRUE){
-        count_NA = count_NA + 1 # Identify and count columns with only NA values (i.e., not used in that model)
-      } 
-    }
-    num_SIV = (ncol(df)-count_NA)/2 # Calculate the number of input variables
-    input = runif(num_SIV,0,1) # Generate random test input from a uniform distribution between 0 and 1
-    x = try(HSIeqtn(name,input,HSImetadata)) # Calculate overall HSI if possible
-    
-    if (x < 0 | x > 1){
-      print("Error: HSI value outside of valid range.")
-      stop()
-    } else if (is.na(x)) {
-      print("Error: HSI value not calculated. Please review SIV inputs.")
-    } else {
-      mat[i, s+1] = x # Add result to matrix
-    }
-    count_NA = 0 # Reset count_NA to zero
-    num_SIV = 0 # Reset num_SIV to zero
-  }
-}
-
-```
+*Formal model testing*: Prior to release of `ecorest` version **2.1.0**, every function in the package was tested to determine whether strategically selected inputs resulted in expected outcomes (Appendix C). For functions that require mathematical calculations, expected (*i.e.*, correct) inputs, inputs with NA values, and invalid inputs were tested to ensure that functions properly handled both error messages and correct outputs.Where applicable, functions were also tested to ensure that inputs with mismatched lengths resulted in an error message.Each function was tested between 300 and 9999 times, depending on inputs (Appendix C).
 
 
 ##### *4.1.3 Model updates: peer review and version control*
 
-R packages published and maintained on the Comprehensive R Archive Network (CRAN) undergo automated reviews prior to initial package release and every package update to ensure that they are functional and compatible with multiple versions of R software, and that dependencies or reverse dependencies remain functional (Wickham and Bryan 2023). Every initial R package submission is subject to both this automated review and an additional human review to ensure that it meets the CRAN standards for quality assurance (Wickham and Bryan 2023). Version 1.0.0 of `ecorest` passed the automated and human reviews at initial submission, and both automated reviews for updates to version 2.0.0 and 2.0.1. The newest version of `ecorest`, v 2.0.1, is currently available on CRAN at https://cran.r-project.org/web/packages/ecorest/index.html, and older versions are archived on CRAN at https://cran.r-project.org/src/contrib/Archive/ecorest/.
-
-In addition to the CRAN review, `ecorest` was reviewed for model certification by the Ecosystem Restoration Planning Center of Expertise (ECO-PCX) (Appendix G)...describe the review process here?
+R packages published and maintained on the Comprehensive R Archive Network (CRAN) undergo automated reviews prior to initial package release and every package update to ensure that they are functional and compatible with multiple versions of R software, and that dependencies or reverse dependencies remain functional (Wickham and Bryan 2023). Every initial R package submission is subject to both this automated review and an additional human review to ensure that it meets the CRAN standards for quality assurance (Wickham and Bryan 2023). Version 1.0.0 of `ecorest` passed the automated and human reviews at initial submission, and both automated reviews for updates to version 2.0.0, 2.0.1, and **2.1.0**. The newest version of `ecorest`, v **2.1.0**, is currently available on CRAN at https://cran.r-project.org/web/packages/ecorest/index.html, and older versions are archived on CRAN at https://cran.r-project.org/src/contrib/Archive/ecorest/.
 
 #### *4.2. Technical Quality*  
 
@@ -785,7 +666,14 @@ knitr::kable(ecorest.testing.record, caption = "Table C-1. Testing records for H
 ```
 
 
-Insert comprehensive model testing documentation.
+```{r}
+# Import list of ecorest HSI models that were tested with example data
+ecorest.unit.tests <- read.csv("Unit.Testing.ecorest.csv")
+
+# Return a summary table 
+knitr::kable(ecorest.unit.tests, caption = "Table C-2. Testing records for functions in ecorest.", col.names = c("Function", "Test", "Example output", "Number of tests", "Expected output", "Pass rate", "Outcome"))
+
+```
 
 
 ## **Appendix D: Example of Sensitivity Analysis**
