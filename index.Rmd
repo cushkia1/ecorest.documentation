@@ -427,12 +427,6 @@ CEICAplotter
 ```
 
 
-#### *3.4. ecorest Web Application*  
-
-
-**Insert description of the Shiny app once complete. The goal of this section is to describe app construction and basic flow of logic (testing will be described below).**
-
-
 ## **4. Evaluation**
 
 
@@ -641,12 +635,6 @@ Within R-package:
 * Help includes examples
 * Insert.  
 
-Within shiny app:  
-
-* Insert  
-* Insert  
-
-
 
 ## **5. Application and Communication**
 
@@ -759,7 +747,6 @@ Wickham, H. and Bryan, J. 2023. R packages: organize, test, document, and share 
 * *ERDC*: U.S. Army Engineer Research and Development Center.  
 * *FWOP*: Future WithOut Project Conditions.
 * *[R](https://cran.r-project.org/)*: Statistical software language used to program ecorest (R Core Team 2019).  
-* *[shiny](https://shiny.rstudio.com/)*: R package that makes it easy to build interactive web apps straight from R.  
 * *USACE*: U.S. Army Corps of Engineers.  
 * *USFWS*: U.S. Fish and Wildlife Service.  
 
@@ -813,9 +800,6 @@ A tutorial on how to conduct sensitivity and uncertainty analysis for HSI models
 Step-by-step (screenshot-style) guide for use.  How is the model applied?  Differences in scenarios?  Experimental design for model runs?  Range of uncertainty analyzed in model runs?  
 
 Insert step-by-step guide to model application with R only.
-
-
-Insert step-by-step guide to model application with shiny only. Mostly screenshots with labeled steps.
 
 
 ## **Appendix F: Example Applications**
