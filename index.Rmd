@@ -488,16 +488,7 @@ R packages published and maintained on the Comprehensive R Archive Network (CRAN
 
 #### *4.2. Technical Quality*  
 
-
-Technical quality: This is the scientific evaluation of the model.  Describe what makes the models of the appropriate or highest scientific quality (e.g., literature basis).  What is the effect of any one variable on the outcome (analysis that answers question – global sensitivity analysis of model structure)?  Does the model structure make sense?  How uncertain are model variables?  Are parameters repeatable, reliable, and transparent?  Limitations in terms of breaking points of the model (parametric).  Verification exercise?  Validation exercise?  Goodness of fit?  Pattern oriented modeling?  Turing test?
-
-Models are all literature-based and incorporate expert opinion
-
-Sensitivity and uncertainty analysis conducted for every model - summarise this and add link to PDF summaries on GitHub
-
-Discuss how users should critically evaluate whether models are applicable in their current state, and could consider running an additional sensitivity analysis using code in Appendix D if uniform distribution doesn't seem reasonable.
-
-
+All blue-book HSI models included in `ecorest` are literature-based and grounded in expert opinion. To further assess each model's technical quality, a sensitivity and uncertainty analysis was performed (Cushway et al., in review). Results of each analysis are summarized in PDF format at https://github.com/EcoModTeam/ecorest-sensitivity-and-uncertainty, but users interested in evaluating model technical quality may consider running their own sensitivity and uncertainty analysis using the process outlined in Appendix D, as the current analysis was generalized for all models and made relatively broad assumptions about parameter and output probability distributions. 
 
 #### *4.3. Usability*  
 
