@@ -142,32 +142,11 @@ knitr::kable(Table1, caption="**Table 1. Stepwise development of the SMURF conce
 
 In the quantification step, the conceptual ecological model is converted into explicit equations, parameter definitions, and a numerical procedure for computation (Grant and Swannack 2008).This section describes the theoretical basis for ecorest, the approach used to compile the toolkit and the associated functions. 
 
+Ecorest contains three categories of datasets and analytical functions designed to support ecosystem restoration decision-making, with an emphasis on U.S. Army Corps of Engineers applications. First, a common data structure was developed for index models, data were compiled for existing habitat suitability index (HSI) models, and a Toolkit for interActive Modeling (TAM) was developed to facilitate development of new index models (Carrillo et al. 2019). Second, an engine was developed for computing index models with functions for both generic model evaluation outputs (e.g., suitability curve visualization and sensitivity analysis) and application-specific outputs (e.g., forecasts of with and without project conditions). Third, a series of functions were developed to conduct cost-effectiveness and incremental cost analyses (CEICA), which can be applied to index model outputs or any other trade-off between benefits and costs. These three topics are synthesized into a R-package (McKay, Hernandez-Abrams, and Cushway 2025) and will be the focus of this report.
 
-Ecorest contains three categories of datasets and analytical functions designed to support ecosystem restoration decision-making, with an emphasis on U.S. Army Corps of Engineers applications. First, a common data structure was developed for index models, data were compiled for existing habitat suitability index (HSI) models, and a Toolkit for interActive Modeling (TAM) was developed to facilitate development of new index models (Carrillo et al. 2019). Second, an engine was developed for computing index models with functions for both generic model evaluation outputs (e.g., suitability curve visualization and sensitivity analysis) and application-specific outputs (e.g., forecasts of with and without project conditions). Third, a series of functions were developed to conduct cost-effectiveness and incremental cost analyses (CEICA), which can be applied to index model outputs or any other trade-off between benefits and costs. These three topics are synthesized into a R-package and will be the focus of this report.
+R is a free, open-source language and software environment for statistical computing and graphics maintained by the R Core Team and supported by the R Foundation. R supports reproducible, script-based workflows and is extended through “packages,” which bundle functions, documentation, and (when applicable) datasets into a standardized structure that can be installed and executed consistently across operating systems.
 
-
-Review of Existing Models: An enormous array of models has been developed for THIS SUBJECT.  Briefly review types and constraints of other models.  Why is a new model needed?  Are their prior tools being built from?
-
-Theoretical basis: Is there a population modeling framework?  Are there nutrient cycling theories being captured?  Is there a prior field framework?  Cite literature explaining the mechanisms being captured in the model.
-
-Modeling approach: What basic modeling approach (index, agent, nutrient flow)?  Input requirements (e.g., few parameters vs. extensive geospatial layers), and the degree of development (e.g., long history vs. ad hoc)?  Key assumptions and limitations (bulleted or listed) – scope of the model, caveats, what does the modeler want the user to know about its soft-underbelly.
-
-Scale: Review the treatment of time (time step, simulation period) and space (lumped v. explicit).  
-
-Functional form: Insert the formulae, algorithms, equations, variables, etc.  Insert math.  
-
-Numerical Toolkit: What number cruncher is being used (language)?  Who developed it?  How is it used?  Input-output workflow (data format and processing).  What are the model specs (software / hardware requirements)?  Training / users?   
-
-First, a common data structure was developed for index models, data were compiled for existing habitat suitability index (HSI) models, and a Toolkit for interActive Modeling (TAM) was developed to facilitate development of new index models (Carrillo et al. 2019). Second, an engine was developed for computing index models with functions for both generic model evaluation outputs (e.g., suitability curve visualization and sensitivity analysis) and application-specific outputs (e.g., forecasts of with and without project conditions). Third, a series of functions were developed to conduct cost-effectiveness and incremental cost analyses (CEICA), which can be applied to index model outputs or any other trade-off between benefits and costs. These three topics are synthesized into a R-package and will be the focus of this report. Future activities will include the development of a user interface for calling these data and functions (without prior programming expertise) along with associated user manuals and guidance documents.
-
-US Fish and Wildlife Service. (1980a). Habitat as a basis for environmental assessment. Ecological Services Manual, 101.
-
-US Fish and Wildlife Service. (1980b). Habitat Evaluation Procedures (HEP). Ecological Services Manual, 102.
-
-US Fish and Wildlife Service. (1981). Standards for the Development of Habitat Suitability Index Models. Ecological Services Manual, 103.
-
-
-Background on R
+The [ecorest package page](https://CRAN.R-project.org/package=ecorest)is distributed through the Comprehensive R Archive Network (CRAN), the primary public repository for R packages. CRAN maintains repository policies and uses automated checks (including installation and “R CMD check” style testing) to evaluate package structure, documentation, dependencies, and runnable examples across platforms. Packages are routinely re-checked over time as R and dependencies change, and maintainers may be required to address issues to remain compliant while noncompliant packages may be archived. See the [ecorest package page](https://CRAN.R-project.org/package=ecorest) for details.
 
 
 #### *3.1. USFWS Habitat Suitability Model Data*  
@@ -569,7 +548,7 @@ Hijmans R.J. and Ghosh A. 2019. Spatial data analysis with R. https://rspatial.o
 
 McKay S.K.  2009.  Reducing spreadsheet errors.  ERDC TN-EMRRP-EBA-03.  U.S. Army Engineer Research and Development Center, Vicksburg, Mississippi.
 
-McKay S.K. and Hernández-Abrams D.D. 2020. Package ‘ecorest’. CRAN Reference Manual. https://cran.r-project.org/web/packages/ecorest/ecorest.pdf. 
+McKay, S. Kyle, Darixa D. Hernandez-Abrams, and Kiara C. Cushway. 2025. ecorest: Conducts Analyses Informing Ecosystem Restoration Decisions. R package, version 2.0.1. Comprehensive R Archive Network (CRAN). https://CRAN.R-project.org/package=ecorest
 
 McKay S.K., Pruitt B.A., Zettle B., Hallberg N., Hughes C., Annaert A., Ladart M., and McDonald J. 2018a. Proctor Creek Ecological Model (PCEM): Phase 1-Site screening.  ERDC/EL TR-18-11. U.S. Army Engineer Research and Development Center, Vicksburg, Mississippi.
 
