@@ -139,13 +139,12 @@ knitr::kable(Table1, caption="**Table 1. Stepwise development of the SMURF conce
 
 
 ## **3. Quantification**
-Testing push from R studio
+
 In the quantification step, the conceptual ecological model is converted into explicit equations, parameter definitions, and a numerical procedure for computation (Grant and Swannack 2008).This section describes the theoretical basis for ecorest, the approach used to compile the toolkit and the associated functions. 
 
 
-Ecorest contains three categories of datasets and analytical functions designed to support ecosystem restoration decision-making, with an emphasis on U.S. Army Corps of Engineers applications. First, a common data structure was developed for index models, data were compiled for existing habitat suitability index (HSI) models, and a Toolkit for interActive Modeling (TAM) was developed to facilitate development of new index models (Carrillo et al. 2019). Second, an engine was developed for computing index models with functions for both generic model evaluation outputs (e.g., suitability curve visualization and sensitivity analysis) and application-specific outputs (e.g., forecasts of with and without project conditions). Third, a series of functions were developed to conduct cost-effectiveness and incremental cost analyses (CEICA), which can be applied to index model outputs or any other trade-off between benefits and costs. These three topics are synthesized into a R-package and will be the focus of this report. Future activities will include the development of a user interface for calling these data and functions (without prior programming expertise) along with associated user manuals and guidance documents.
+Ecorest contains three categories of datasets and analytical functions designed to support ecosystem restoration decision-making, with an emphasis on U.S. Army Corps of Engineers applications. First, a common data structure was developed for index models, data were compiled for existing habitat suitability index (HSI) models, and a Toolkit for interActive Modeling (TAM) was developed to facilitate development of new index models (Carrillo et al. 2019). Second, an engine was developed for computing index models with functions for both generic model evaluation outputs (e.g., suitability curve visualization and sensitivity analysis) and application-specific outputs (e.g., forecasts of with and without project conditions). Third, a series of functions were developed to conduct cost-effectiveness and incremental cost analyses (CEICA), which can be applied to index model outputs or any other trade-off between benefits and costs. These three topics are synthesized into a R-package and will be the focus of this report.
 
-**RESUME EDITING HERE**
 
 Review of Existing Models: An enormous array of models has been developed for THIS SUBJECT.  Briefly review types and constraints of other models.  Why is a new model needed?  Are their prior tools being built from?
 
