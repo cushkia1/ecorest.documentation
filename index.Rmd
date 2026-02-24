@@ -150,8 +150,7 @@ The [ecorest package page](https://CRAN.R-project.org/package=ecorest)is distrib
 
 #### *3.1. USFWS Habitat Suitability Model Data*  
 
-
-**Insert introductory text.**
+The ecorest package includes a compiled library of USFWS HSI models implemented in a standardized digital format to improve accessibility, reduce transcription error, and support repeatable computations. The data structures presented in **Section 3.1** store the curve breakpoints and coding conventions needed to reconstruct published suitability relationships, while model metadata document model details (e.g., geographic range, scientic name), intended application context, and citation information. Together, these datasets provide the inputs required for the index model calculations described in **Section 3.2**.
 
 
 *`HSImodels$modelname`*
@@ -168,7 +167,7 @@ knitr::kable(Table2, caption="**Table 2. Example of USFWS Habitat Suitability Mo
 
 This data frame contains metadata for 349 U.S. Fish and Wildlife Service Habitat suitability index (HSI) models, such as model names, documentation, and websites for documentation among other fields. Table 3 provides a full listing of all fields contained within `HSImetadata` along with an example for the barred owl model (Allen 1987).
 
-
+**Insert a table for metadata**
 ```{r}
 # #Variable descriptions from R-package
 # Table3 <- data.frame(c("Model name", "Model specifications", "Scientific nomenclature of modeled taxa", "Geographic range of organism", "Type of habitat", "Citation of original model", "Conditions under which model may be applied", "Link to original individual model source", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Suitability index values for each organism specific condition", "Food component equation", "Cover component equation", "Cover-food component equation", "Winter food component", "Water component", "Cover breeding component", "Cover nesting component", "Water quality component", "Reproduction component", "Cover reproduction component", "Disturbance component", "Other component", "Larval component", "Embryo and larval component", "Embryo component", "Juvenile component", "Fry component", "Spawning component", "Adult component", "Island component", "Non-island component", "Winter cover food component", "Topography component", "Juvenile adult component", "HSI overarching model equation in R syntax"))
