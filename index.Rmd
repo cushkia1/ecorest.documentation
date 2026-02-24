@@ -1,7 +1,7 @@
 ---
 title: "ecorest: Generic Platform for Index-Based Modeling"
 author: "S. Kyle McKay, Darixa D. Hernández-Abrams, Kiara C. Cushway, and Todd M. Swannack"
-date: "October 2025"
+date: "Feb 24, 2025"
 output:
   html_document:
     toc: yes
