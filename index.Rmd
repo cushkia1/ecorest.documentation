@@ -330,8 +330,7 @@ HUcalc
 
 #### *3.3. Decision Support Engine*  
 
-
-**Insert.**
+This section documents the decision support functions in ecorest used to compare restoration alternatives when benefits are non-monetary and costs are monetary (or otherwise expressed in different units). The functions implement standard cost-effectiveness and incremental cost analysis concepts by (1) converting time-varying outcomes to time-averaged metrics when needed, (2) identifying cost-effective alternatives that form the efficient frontier, (3) evaluating incremental trade-offs along that frontier to identify “best buys,” and (4) producing standardized tabular and graphical summaries for interpretation and reporting.
 
 
 *`annualizer(timevec, benefits)`*
