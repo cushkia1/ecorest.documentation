@@ -25,7 +25,7 @@ The U.S. Army Corps of Engineers (USACE) engages in a large variety of decisions
 
 *Author Headnotes*:  
 
-* Corresponding Author: **UPDATE** S. Kyle McKay, U.S. Army Engineer Research and Development Center (ERDC), Environmental Laboratory (EL), New York, New York, Office: 917-790-8717, Cell: 970-980-9747, kyle.mckay@usace.army.mil  
+* Corresponding Author: Darixa D. Hernandez-Abrams, U.S. Army Engineer Research and Development Center (ERDC), Environmental Laboratory (EL), Vicksburg, M.S., darixa.d.hernandez-abrams@usace.army.mil  
 * This report provides an overview of development of an ecological modeling platform for USACE model certification. Model source code has been previously reviewed and released as the [`ecorest`](https://cran.r-project.org/web/packages/ecorest/index.html) "package" by the Comprehensive R Archival Network ([CRAN](https://cran.r-project.org/)). This report will simultaneously undergo peer review as an ERDC Technical Report.  
 * All analyses are conducted in the (ACE-IT approved) R Statistical Software.  
 * Color schemes may seem non-traditional (i.e., non-rainbow arrays), but colors were chosen for maximum understanding by color deficient audiences. Nationwide, approximately 8% of men and 0.5% of women exhibit some form of color deficiency. In USACE, supervisors (GS-13 or higher) are ~74% male and ~26% female, which results in a 6% chance of a team member exhibiting color-blindness (1 out of 17). Among USACE decision makers, army officers (O4 or higher) are ~85% male and ~15% female, which results in a 7% chance of a team member exhibiting color-blindness (1 out of 15). Specifically, `ecorest` uses [viridis](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) color schemes. 
