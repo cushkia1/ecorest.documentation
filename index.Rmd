@@ -122,14 +122,14 @@ colnames(Table1) <- c("Step", "ecorest")
 #Specify rows of the table
 Table1[1,] <- c("1. State the model objectives.", "To develop a technically sound and computationally accurate suite of tools for assessing ecosystem restoration project planning with index models and informing restoration decisions, which are easily accessible for use by USACE planners, biologists, and engineers.")
 Table1[2,] <- c("2. Bound the system of interest.", "Index models of ecological systems structured around the quantity and quality of habitat, where quality is defined by a set of independent variables and suitability index curves.")
-Table1[3,] <- c("3. Identify critical model components within the system.", "The model platform needs to include six basic elements: (1) a generic format for defining suitability index curves, (2) a library of existing index models developed by the US Fish and Wildlife Service, (3) a computational engine for computing index model outcomes, (4) a computational engine for conducting decision support modeling, (5) a simple, adaptable, and modular input-output structure, and (6) a user friendly interface for audiences without programming experience.")
-Table1[4,] <- c("4. Articulate relationships among model components.", "A computational engine may be embedded within a user-friendly interface, both of which can access model inputs and create model outputs.")
+Table1[3,] <- c("3. Identify critical model components within the system.", "The model platform needs to include six basic elements: (1) a generic format for defining suitability index curves, (2) a library of existing index models developed by the US Fish and Wildlife Service, (3) a computational engine for computing index model outcomes, (4) a computational engine for conducting decision support modeling, and (5) a simple, adaptable, and modular input-output structure")
+Table1[4,] <- c("4. Articulate relationships among model components.", "Components interact through a modular workflow in which model inputs are used to build suitability relationships, index-model functions compute habitat outputs, and decision-support functions consume those outputs to evaluate trade-offs.")
 Table1[5,] <- c("5. Represent the conceptual model.", "Figure 1 provides an overview of computational workflow for the `ecorest` modeling platform")
 
 ##########
 #Send output table
 rownames(Table1) <- NULL
-knitr::kable(Table1, caption="**Table 1. Stepwise development of the SMURF conceptual model (following steps in Fischenich 2008).**") 
+knitr::kable(Table1, caption="**Table 1. Stepwise development of the ecorest conceptual model (following steps in Fischenich 2008).**") 
 
 ```
 
