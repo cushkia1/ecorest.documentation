@@ -666,12 +666,10 @@ Insert overview of applications:
 
 * Single-site existing condition assessment with multiple existing models (Savannah River)  
 * Modified HSI model (bluegill or modified mink)  
-* User-specified model (Swannack oyster)  
-* Impact assessment (DDHA/Jung/Fischer)  
+* User-specified model (San Francisco)  
+* Impact assessment (Hernandez-Abrams/Jung/Fischer)  
 * Comparison of Single-Site Habitat Restoration Alternatives (Huron Island)  
 * Multi-site Restoration Prioritization (Hudson River)  
-* Comparison of Non-Habitat Restoration Alternatives (HRE social)   
-* Spatial data example? (NJBB)  
 
 
 #### *F.1. Insert*  
